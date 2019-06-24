@@ -16,7 +16,8 @@
 		422195DC22BD1D650083BF18 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422195DB22BD1D650083BF18 /* calculatorTests.swift */; };
 		422195E722BD1D650083BF18 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422195E622BD1D650083BF18 /* calculatorUITests.swift */; };
 		422195F522BD8E7A0083BF18 /* BarChart in Resources */ = {isa = PBXBuildFile; fileRef = 422195F422BD8E790083BF18 /* BarChart */; };
-		422195F722BD95CF0083BF18 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 422195F622BD95CF0083BF18 /* Podfile */; };
+		4254381B22BE76A5004F1CCF /* ExpressionProccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254381A22BE76A5004F1CCF /* ExpressionProccessor.swift */; };
+		4254381D22BE7AD2004F1CCF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4254381C22BE7AD2004F1CCF /* String+Extensions.swift */; };
 		D14E26FCF02324E9EA13330D /* Pods_calculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4280CE6D90FF4A7FF8E84B94 /* Pods_calculatorTests.framework */; };
 		FD8E7F8E57092D1419586AE9 /* Pods_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141649D53F0F96D01F5D6CBD /* Pods_calculator.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +57,8 @@
 		422195E622BD1D650083BF18 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		422195E822BD1D650083BF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422195F422BD8E790083BF18 /* BarChart */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BarChart; sourceTree = "<group>"; };
-		422195F622BD95CF0083BF18 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4254381A22BE76A5004F1CCF /* ExpressionProccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionProccessor.swift; sourceTree = "<group>"; };
+		4254381C22BE7AD2004F1CCF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4280CE6D90FF4A7FF8E84B94 /* Pods_calculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93909F3D818D2E9C80CE134B /* Pods-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-calculator/Pods-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		A4DF05A4E9283595D0878028 /* Pods-calculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculatorTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-calculatorTests/Pods-calculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 		422195B722BD1D630083BF18 = {
 			isa = PBXGroup;
 			children = (
-				422195F622BD95CF0083BF18 /* Podfile */,
 				422195C222BD1D630083BF18 /* calculator */,
 				422195DA22BD1D650083BF18 /* calculatorTests */,
 				422195E522BD1D650083BF18 /* calculatorUITests */,
@@ -118,7 +119,9 @@
 			children = (
 				422195F422BD8E790083BF18 /* BarChart */,
 				422195C322BD1D630083BF18 /* AppDelegate.swift */,
+				4254381A22BE76A5004F1CCF /* ExpressionProccessor.swift */,
 				422195C522BD1D630083BF18 /* ViewController.swift */,
+				4254381C22BE7AD2004F1CCF /* String+Extensions.swift */,
 				422195C722BD1D630083BF18 /* Main.storyboard */,
 				422195CD22BD1D640083BF18 /* Assets.xcassets */,
 				422195CF22BD1D640083BF18 /* LaunchScreen.storyboard */,
@@ -273,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422195F722BD95CF0083BF18 /* Podfile in Resources */,
 				422195D122BD1D640083BF18 /* LaunchScreen.storyboard in Resources */,
 				422195CE22BD1D640083BF18 /* Assets.xcassets in Resources */,
 				422195C922BD1D630083BF18 /* Main.storyboard in Resources */,
@@ -371,6 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4254381D22BE7AD2004F1CCF /* String+Extensions.swift in Sources */,
+				4254381B22BE76A5004F1CCF /* ExpressionProccessor.swift in Sources */,
 				422195C622BD1D630083BF18 /* ViewController.swift in Sources */,
 				422195CC22BD1D630083BF18 /* calculator.xcdatamodeld in Sources */,
 				422195C422BD1D630083BF18 /* AppDelegate.swift in Sources */,
