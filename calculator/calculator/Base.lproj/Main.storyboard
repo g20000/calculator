@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="constraintViewContent" destination="O7j-Jb-tMZ" id="lbY-AO-E3W"/>
                         <outlet property="textFieldExpression" destination="qjh-AQ-DoD" id="0lA-Ks-tdX"/>
+                        <outlet property="textFieldXPointRange" destination="eku-AW-XSk" id="OcH-OU-u7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

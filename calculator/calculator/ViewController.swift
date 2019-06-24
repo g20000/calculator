@@ -12,6 +12,7 @@ import Typist
 class ViewController: UIViewController {
 
     @IBOutlet weak var textFieldExpression: UITextField!
+    @IBOutlet weak var textFieldXPointRange: UITextField!
     @IBOutlet weak var constraintViewContent: NSLayoutConstraint!
     
     var expressionArray = Array<String>()
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
     var varChar: String?
     
     let keyboard = Typist()
+    
+    //MARK: - Lyfecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +71,12 @@ class ViewController: UIViewController {
             showAlert()
             return
         }
-        
+       
+        let xPointRange = textFieldXPointRange.text?.trimmingCharacters(in: .whitespaces)
+        expressionProccessor.functionRange = Int((xPointRange)!)!
         expressionProccessor.generateGraphPointsForFunction(textFieldExpression.text!)
     }
+    
+    
 }
 
