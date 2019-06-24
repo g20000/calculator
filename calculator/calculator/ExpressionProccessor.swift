@@ -13,7 +13,7 @@ class ExpressionProccessor: NSObject {
     var expressionVariable: String?
     
     var functionPoints = Array<CGPoint>()
-    var functionRange = 10
+    var functionXPointRange = 100
     
     func validateExpression(_ dirtyExpression: String) -> Bool {
         func recordExpressionVariable(_ variables: Array<String>) -> Bool {
@@ -25,7 +25,7 @@ class ExpressionProccessor: NSObject {
             expressionVariable = nil
             return false
         }
-        
+        ///////////////////////////////////////
         
         let separators = NSCharacterSet(charactersIn: " +-*/()123456789")
         let expressionVariables = dirtyExpression.components(separatedBy: separators as CharacterSet).filter { (char) in
@@ -52,7 +52,7 @@ class ExpressionProccessor: NSObject {
     }
     
     func generateGraphPointsForFunction(_ expression: String) {
-        for i in 0...functionRange {
+        for i in 0...functionXPointRange {
             let point = CGPoint(x: i, y: replaceVariable(i, expression))
             functionPoints.append(point)
         }

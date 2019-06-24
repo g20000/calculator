@@ -11,6 +11,7 @@ import Typist
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var viewContentGraph: UIView!
     @IBOutlet weak var textFieldExpression: UITextField!
     @IBOutlet weak var textFieldXPointRange: UITextField!
     @IBOutlet weak var constraintViewContent: NSLayoutConstraint!
@@ -73,8 +74,15 @@ class ViewController: UIViewController {
         }
        
         let xPointRange = textFieldXPointRange.text?.trimmingCharacters(in: .whitespaces)
-        expressionProccessor.functionRange = Int((xPointRange)!)!
+        if xPointRange!.count > 0 {
+            expressionProccessor.functionXPointRange = Int((xPointRange)!)!
+        }
         expressionProccessor.generateGraphPointsForFunction(textFieldExpression.text!)
+        
+        
+        let viewGraph = GraphView(frame: viewContentGraph.frame )
+        viewGraph.points = expressionProccessor.functionPoints
+        viewContentGraph.addSubview(viewGraph)
     }
     
     
