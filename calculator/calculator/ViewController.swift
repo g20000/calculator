@@ -58,15 +58,18 @@ class ViewController: UIViewController {
     @IBAction func onCalcButtonTouched(_ sender: Any) {
         view.endEditing(true)
         
-        if !expressionProccessor.validateExpression(textFieldExpression.text!) {
+        guard expressionProccessor.validateExpression(textFieldExpression.text!) else {
             func showAlert() {
-                let actionController = UIAlertController(title: "Ошибка", message: "Проверьте выражение", preferredStyle: .alert)
+                let actionController = UIAlertController(title: "Error", message: "Check expression", preferredStyle: .alert)
                 actionController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(actionController, animated: true, completion: nil)
             }
-            
+
             showAlert()
+            return
         }
-    }    
+        
+        expressionProccessor.generateGraphPointsForFunction(textFieldExpression.text!)
+    }
 }
 
